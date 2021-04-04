@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ul8-Km-rh7">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Конвертация-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConvertViewController" customModule="ConvertTestVasiliev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CustomView" customModule="ConvertTestVasiliev" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Предупреждение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg9-af-cTU">
+                                <rect key="frame" x="110" y="356" width="157.5" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="nOQ-0X-CZC">
+                                <rect key="frame" x="49" y="231" width="277" height="93"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="GS2-jd-JUb">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-Hk-5un" customClass="CustomButton" customModule="ConvertTestVasiliev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="9b4-sr-B0v"/>
+                                                    <constraint firstAttribute="width" constant="47" id="ecz-xq-VFj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="19"/>
+                                                <state key="normal" title="RUB">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" red="0.37022424199999998" green="1" blue="0.3386616938" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" red="0.054466923700000003" green="0.82396258730000005" blue="0.0104885294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="fromCurrencyButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcJ-Az-wDa"/>
+                                                    <segue destination="Hv9-hZ-2ss" kind="show" identifier="fromCurrency" id="4H3-zb-Eca"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Из какой валюты..." minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="HQS-Og-PfM">
+                                                <rect key="frame" x="84" y="0.0" width="193" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="WDj-ss-fpl"/>
+                                                    <constraint firstAttribute="height" constant="35" id="WqB-Tg-rhT"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.054466923700000003" green="0.82396258730000005" blue="0.0104885294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HQS-Og-PfM" firstAttribute="top" secondItem="GS2-jd-JUb" secondAttribute="top" id="7Y0-dQ-H4B"/>
+                                            <constraint firstItem="HQS-Og-PfM" firstAttribute="leading" secondItem="mp8-Hk-5un" secondAttribute="trailing" constant="37" id="EHQ-aK-SVX"/>
+                                            <constraint firstItem="mp8-Hk-5un" firstAttribute="leading" secondItem="GS2-jd-JUb" secondAttribute="leading" id="Tn8-Dz-3He"/>
+                                            <constraint firstAttribute="bottom" secondItem="HQS-Og-PfM" secondAttribute="bottom" id="XRc-Tn-P1g"/>
+                                            <constraint firstAttribute="trailing" secondItem="HQS-Og-PfM" secondAttribute="trailing" id="i3g-V9-vpv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-hd-WYn">
+                                        <rect key="frame" x="0.0" y="58" width="277" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiq-ig-n43" customClass="CustomButton" customModule="ConvertTestVasiliev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="47" id="XCj-M3-37E"/>
+                                                    <constraint firstAttribute="height" constant="35" id="mcE-QY-JBz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="19"/>
+                                                <state key="normal" title="USD">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" systemColor="systemTealColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="toCurrencyButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBe-C2-sCU"/>
+                                                    <segue destination="Hv9-hZ-2ss" kind="show" identifier="toCurrency" id="vS4-hj-HlF"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="В какую валюту..." minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JPe-Sp-j72">
+                                                <rect key="frame" x="84" y="0.0" width="193" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="A71-JQ-QgZ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="R8O-J7-bYR"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JPe-Sp-j72" secondAttribute="bottom" id="0qE-gP-zrE"/>
+                                            <constraint firstItem="JPe-Sp-j72" firstAttribute="leading" secondItem="xiq-ig-n43" secondAttribute="trailing" constant="37" id="FvF-LD-MbY"/>
+                                            <constraint firstItem="xiq-ig-n43" firstAttribute="leading" secondItem="ZAH-hd-WYn" secondAttribute="leading" id="JVv-I7-uRK"/>
+                                            <constraint firstAttribute="trailing" secondItem="JPe-Sp-j72" secondAttribute="trailing" id="S0S-ch-uuV"/>
+                                            <constraint firstItem="JPe-Sp-j72" firstAttribute="top" secondItem="ZAH-hd-WYn" secondAttribute="top" id="fb7-Ao-gXv"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2C-cf-79r" customClass="CustomButton" customModule="ConvertTestVasiliev" customModuleProvider="target">
+                                <rect key="frame" x="58.5" y="402" width="258" height="33"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="E1d-63-vsI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="258" id="H54-ic-gHk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <state key="normal" title="Конвертировать">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="convertButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGh-Qn-Tuf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q2C-cf-79r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="85" id="094-Lq-VHE"/>
+                            <constraint firstItem="q2C-cf-79r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="67U-Gc-oFg"/>
+                            <constraint firstItem="nOQ-0X-CZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="7ob-B6-mc2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nOQ-0X-CZC" secondAttribute="trailing" constant="49" id="83J-74-KaG"/>
+                            <constraint firstItem="Yg9-af-cTU" firstAttribute="centerX" secondItem="q2C-cf-79r" secondAttribute="centerX" constant="1.25" id="Mba-qw-Uri"/>
+                            <constraint firstItem="q2C-cf-79r" firstAttribute="top" secondItem="Yg9-af-cTU" secondAttribute="bottom" constant="22" id="hrl-ZO-pba"/>
+                            <constraint firstItem="Yg9-af-cTU" firstAttribute="top" secondItem="nOQ-0X-CZC" secondAttribute="bottom" constant="32" id="x0F-a5-CnA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Конвертация" id="v8u-9Q-z8B">
+                        <barButtonItem key="backBarButtonItem" title=" " id="wZo-ha-Xrb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="convertButton" destination="q2C-cf-79r" id="uRA-vQ-9b8"/>
+                        <outlet property="fromCurrencyChange" destination="mp8-Hk-5un" id="DvK-sD-6pp"/>
+                        <outlet property="fromCurrencyTextField" destination="HQS-Og-PfM" id="sRH-Vp-GmR"/>
+                        <outlet property="inCurrencyChange" destination="xiq-ig-n43" id="W8U-Ww-sCo"/>
+                        <outlet property="inCurrencyTextField" destination="JPe-Sp-j72" id="Gaf-Nr-KCa"/>
+                        <outlet property="warningLabel" destination="Yg9-af-cTU" id="MSA-ee-fbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="113.79310344827587"/>
+        </scene>
+        <!--Currency List View Controller-->
+        <scene sceneID="xJZ-JD-xEH">
+            <objects>
+                <viewController id="Hv9-hZ-2ss" customClass="CurrencyListViewController" customModule="ConvertTestVasiliev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egk-rM-EPb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xRf-GH-7Ou">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="linkColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="52" id="FUk-QF-xW5" customClass="CurrencyCell" customModule="ConvertTestVasiliev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FUk-QF-xW5" id="NDA-ZG-1hB" customClass="CurrencyCellTableViewCell" customModule="ConvertTestVasiliev" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-J1-3xO">
+                                                    <rect key="frame" x="151.5" y="5.5" width="72" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="7wP-Xm-F5n"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="BXg-8Y-G8K"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Tba-J1-3xO" firstAttribute="centerY" secondItem="NDA-ZG-1hB" secondAttribute="centerY" id="7gV-Iw-pHF"/>
+                                                <constraint firstItem="Tba-J1-3xO" firstAttribute="centerX" secondItem="NDA-ZG-1hB" secondAttribute="centerX" id="LbW-MK-vsX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="currencyNameLabel" destination="Tba-J1-3xO" id="HuX-kG-rGM"/>
+                                            <segue destination="xnd-kv-Cea" kind="unwind" unwindAction="fromCurrencyButtonPress:" id="dNr-W3-m83"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hv9-hZ-2ss" id="See-Zk-dFA"/>
+                                    <outlet property="delegate" destination="Hv9-hZ-2ss" id="rVv-g4-NX1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dn9-cm-mIq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dn9-cm-mIq" firstAttribute="trailing" secondItem="xRf-GH-7Ou" secondAttribute="trailing" id="ZDo-4L-hqL"/>
+                            <constraint firstItem="xRf-GH-7Ou" firstAttribute="top" secondItem="dn9-cm-mIq" secondAttribute="top" id="fzZ-o0-Rnp"/>
+                            <constraint firstItem="dn9-cm-mIq" firstAttribute="bottom" secondItem="xRf-GH-7Ou" secondAttribute="bottom" id="qyQ-6Q-Zkg"/>
+                            <constraint firstItem="xRf-GH-7Ou" firstAttribute="leading" secondItem="dn9-cm-mIq" secondAttribute="leading" id="v7p-tP-GXS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iWK-tz-Jgt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="hLd-OJ-4Tw"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="xRf-GH-7Ou" id="coo-xc-Se7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHm-7h-tat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xnd-kv-Cea" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ukd-42-iGE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ul8-Km-rh7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztz-DV-CRo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zOd-hd-v8Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUI-Hj-a5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.40000000000001" y="113.79310344827587"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="mp8-Hk-5un">
+            <size key="intrinsicContentSize" width="37" height="35"/>
+        </designable>
+        <designable name="q2C-cf-79r">
+            <size key="intrinsicContentSize" width="149" height="36"/>
+        </designable>
+        <designable name="xiq-ig-n43">
+            <size key="intrinsicContentSize" width="36" height="35"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="4H3-zb-Eca"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
