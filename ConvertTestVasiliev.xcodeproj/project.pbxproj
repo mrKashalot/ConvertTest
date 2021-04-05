@@ -9,23 +9,37 @@
 /* Begin PBXBuildFile section */
 		8629C995261335AB009BCCC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629C994261335AB009BCCC5 /* AppDelegate.swift */; };
 		8629C997261335AC009BCCC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629C996261335AC009BCCC5 /* SceneDelegate.swift */; };
-		8629C999261335AC009BCCC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629C998261335AC009BCCC5 /* ViewController.swift */; };
+		8629C999261335AC009BCCC5 /* ConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629C998261335AC009BCCC5 /* ConvertViewController.swift */; };
 		8629C99C261335AC009BCCC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8629C99A261335AC009BCCC5 /* Main.storyboard */; };
 		8629C99F261335AC009BCCC5 /* ConvertTestVasiliev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8629C99D261335AC009BCCC5 /* ConvertTestVasiliev.xcdatamodeld */; };
 		8629C9A1261335B1009BCCC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8629C9A0261335B1009BCCC5 /* Assets.xcassets */; };
 		8629C9A4261335B1009BCCC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8629C9A2261335B1009BCCC5 /* LaunchScreen.storyboard */; };
+		8629C9B626133ACC009BCCC5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629C9B526133ACC009BCCC5 /* CustomView.swift */; };
+		8629C9B926133ADD009BCCC5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8629C9B826133ADD009BCCC5 /* CustomButton.swift */; };
+		8637479326188BC700011F61 /* DataCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8637479226188BC700011F61 /* DataCurrency.swift */; };
+		863972662614850E00280BB1 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863972652614850E00280BB1 /* CurrencyListViewController.swift */; };
+		86397269261485E200280BB1 /* CurrencyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86397268261485E200280BB1 /* CurrencyCellTableViewCell.swift */; };
+		863A1A982619F70300649A82 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863A1A972619F70300649A82 /* ActivityIndicator.swift */; };
+		8665D99A2618EC1C00857556 /* ConvertCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8665D9992618EC1C00857556 /* ConvertCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8629C991261335AB009BCCC5 /* ConvertTestVasiliev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertTestVasiliev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8629C994261335AB009BCCC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8629C996261335AC009BCCC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8629C998261335AC009BCCC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8629C998261335AC009BCCC5 /* ConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertViewController.swift; sourceTree = "<group>"; };
 		8629C99B261335AC009BCCC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8629C99E261335AC009BCCC5 /* ConvertTestVasiliev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConvertTestVasiliev.xcdatamodel; sourceTree = "<group>"; };
 		8629C9A0261335B1009BCCC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8629C9A3261335B1009BCCC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8629C9A5261335B1009BCCC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8629C9B526133ACC009BCCC5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		8629C9B826133ADD009BCCC5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8637479226188BC700011F61 /* DataCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCurrency.swift; sourceTree = "<group>"; };
+		863972652614850E00280BB1 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
+		86397268261485E200280BB1 /* CurrencyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellTableViewCell.swift; sourceTree = "<group>"; };
+		863A1A972619F70300649A82 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		8665D9992618EC1C00857556 /* ConvertCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +72,55 @@
 		8629C993261335AB009BCCC5 /* ConvertTestVasiliev */ = {
 			isa = PBXGroup;
 			children = (
-				8629C994261335AB009BCCC5 /* AppDelegate.swift */,
+				8639726B26149BD200280BB1 /* Model */,
 				8629C996261335AC009BCCC5 /* SceneDelegate.swift */,
-				8629C998261335AC009BCCC5 /* ViewController.swift */,
-				8629C99A261335AC009BCCC5 /* Main.storyboard */,
+				8629C994261335AB009BCCC5 /* AppDelegate.swift */,
+				8629C9C426133B34009BCCC5 /* Controllers */,
+				8629C9C226133B0C009BCCC5 /* CustomDetails */,
 				8629C9A0261335B1009BCCC5 /* Assets.xcassets */,
-				8629C9A2261335B1009BCCC5 /* LaunchScreen.storyboard */,
 				8629C9A5261335B1009BCCC5 /* Info.plist */,
 				8629C99D261335AC009BCCC5 /* ConvertTestVasiliev.xcdatamodeld */,
 			);
 			path = ConvertTestVasiliev;
+			sourceTree = "<group>";
+		};
+		8629C9C226133B0C009BCCC5 /* CustomDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8629C9B826133ADD009BCCC5 /* CustomButton.swift */,
+				8629C9B526133ACC009BCCC5 /* CustomView.swift */,
+			);
+			path = CustomDetails;
+			sourceTree = "<group>";
+		};
+		8629C9C326133B22009BCCC5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8629C99A261335AC009BCCC5 /* Main.storyboard */,
+				8629C9A2261335B1009BCCC5 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8629C9C426133B34009BCCC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8629C998261335AC009BCCC5 /* ConvertViewController.swift */,
+				863972652614850E00280BB1 /* CurrencyListViewController.swift */,
+				86397268261485E200280BB1 /* CurrencyCellTableViewCell.swift */,
+				8629C9C326133B22009BCCC5 /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8639726B26149BD200280BB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8637479226188BC700011F61 /* DataCurrency.swift */,
+				8665D9992618EC1C00857556 /* ConvertCurrency.swift */,
+				863A1A972619F70300649A82 /* ActivityIndicator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +193,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86397269261485E200280BB1 /* CurrencyCellTableViewCell.swift in Sources */,
+				8665D99A2618EC1C00857556 /* ConvertCurrency.swift in Sources */,
+				8629C9B626133ACC009BCCC5 /* CustomView.swift in Sources */,
+				863A1A982619F70300649A82 /* ActivityIndicator.swift in Sources */,
+				863972662614850E00280BB1 /* CurrencyListViewController.swift in Sources */,
+				8637479326188BC700011F61 /* DataCurrency.swift in Sources */,
 				8629C99F261335AC009BCCC5 /* ConvertTestVasiliev.xcdatamodeld in Sources */,
-				8629C999261335AC009BCCC5 /* ViewController.swift in Sources */,
+				8629C9B926133ADD009BCCC5 /* CustomButton.swift in Sources */,
+				8629C999261335AC009BCCC5 /* ConvertViewController.swift in Sources */,
 				8629C995261335AB009BCCC5 /* AppDelegate.swift in Sources */,
 				8629C997261335AC009BCCC5 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W72JPTXKK;
 				INFOPLIST_FILE = ConvertTestVasiliev/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W72JPTXKK;
 				INFOPLIST_FILE = ConvertTestVasiliev/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

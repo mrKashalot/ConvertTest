@@ -8,9 +8,9 @@
 import Foundation
 
 struct ConvertCurrensy: Codable {
-    let baseCurrencyCode: String
+    var baseCurrencyCode: String
     let baseCurrencyName: String
-    let amount: String
+    var amount: String
     let updatedDate: String
     var rates: [String: Rates]?
     let status: String

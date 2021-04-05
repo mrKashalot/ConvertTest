@@ -7,20 +7,18 @@
 
 import UIKit
 
-protocol ViewController: class {
-    func update(text: String)
-}
-
-class ViewController: UIViewController, ViewController {
+class ConvertViewController: UIViewController {
     
-    var currencyFrom = "USD"
-    var currencyTo = "RUB"
-    var amountValue = "2"
+    //MARK: переменные для захвата значений из полей ввода
+    var fromTextField: Double = 0
+    var toTextField: Double = 0
+    
+    private var convertData: ConvertCurrensy?
     
     @IBOutlet weak var fromCurrencyChange: CustomButton!
     @IBOutlet weak var inCurrencyChange: CustomButton!
-    @IBOutlet weak var inCurrencyTextField: UITextField!
     @IBOutlet weak var fromCurrencyTextField: UITextField!
+    @IBOutlet weak var inCurrencyTextField: UITextField!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var convertButton: CustomButton!
     
@@ -61,9 +59,17 @@ class ViewController: UIViewController, ViewController {
             
             do {
                 
-                let convertData = try JSONDecoder().decode(ConvertCurrensy.self, from: data)
+                self.convertData = try JSONDecoder().decode(ConvertCurrensy.self, from: data)
                 
-                print(convertData)
+                //MARK: количество валюты "ИЗ"
+                print(self.convertData?.amount)
+                self.convertData?.amount = String(self.fromTextField)
+                
+                //MARK: аббр. валюты "ИЗ"
+                print(self.convertData?.baseCurrencyCode)
+                
+                //MARK: ["RUB": Rates(currency_name: "Russian ruble"), rate: "57.6457", rate_for_amount: "57.6457"]
+                print(self.convertData?.rates)
                 
             } catch let error {
                 
@@ -72,22 +78,41 @@ class ViewController: UIViewController, ViewController {
         }.resume()
     }
     
-    @IBAction func convertButtonPress(_ sender: UIButton) {
+    @IBAction func convertButtonPress(_ sender: UITextField) {
         
-        fetchConvertData()
+        //MARK: проверка условия поля ввода из какой валюты (предварительный варинат проверки и подстановки
+        if fromCurrencyTextField.text?.isEmpty == false  {
+            
+            fromTextField = Double(fromCurrencyTextField.text!)!
+            print(fromTextField)
+            
+            fetchConvertData()
+            inCurrencyTextField.text = "результат работы  API"
+            
+        } else if inCurrencyTextField.text?.isEmpty == false {
+            
+            toTextField = Double(inCurrencyTextField.text!)!
+            print(toTextField)
+            
+            fetchConvertData()
+            fromCurrencyTextField.text = "результат работы  API"
+        } else {
+            
+            warningLabel.isHidden = false
+        }
+        
     }
-    
     @IBAction func fromCurrencyButtonPress(_ unwindSegue: UIStoryboardSegue) {
+        
     }
     
-    @IBAction func toCurrencyButtonPress(_ sender: Any) {
-        
+    @IBAction func toCurrencyButtonPress(_ unwindSegue: UIStoryboardSegue) {
     }
 }
 
 
 //MARK: - делегат расширения класса поля ввода
-extension ViewController: UITextFieldDelegate {
+extension ConvertViewController: UITextFieldDelegate {
     func textFieldReturn(_ textFiled: UITextField) -> Bool {
         
         textFiled.resignFirstResponder()
@@ -95,7 +120,7 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
     
-    // Функция убирания клавиатуры при нажатии кнопки 'Enter'
+    //MARK: Функция скрытия клавиатуры при нажатии кнопки 'Enter'
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         inCurrencyTextField.resignFirstResponder()
         fromCurrencyTextField.resignFirstResponder()
@@ -121,14 +146,12 @@ extension ViewController: UITextFieldDelegate {
         
         if inCurrencyTextField.text?.isEmpty == false {
             fromCurrencyTextField.text = nil
-            fromCurrencyTextField.text = ""
             convertButton.isEnabled = true
             convertButton.backgroundColor = .green
             convertButton.alpha = 1
             
         } else if fromCurrencyTextField.text?.isEmpty == false {
             inCurrencyTextField.text = nil
-            inCurrencyTextField.text = ""
             convertButton.isEnabled = true
             convertButton.backgroundColor = .green
             convertButton.alpha = 1

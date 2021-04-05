@@ -11,7 +11,7 @@ class CurrencyListViewController: UIViewController {
     
     var currencyArray = [String?]()
     
-    //MARK: объявляем перtменную класса для использования индикатора загрузки
+    //MARK: объявляем перeменную класса для использования индикатора загрузки
     let activityIndicator = ActivityIndicator()
     
     @IBOutlet weak var tableView: UITableView!
@@ -85,6 +85,7 @@ extension CurrencyListViewController: UITableViewDataSource {
         return cell
     }
     
+    //MARK: тут должна быть реализация переноса данных label по надатию на ячейку - но я так и не смог заставить ее работать
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         navigationController?.popViewController(animated: true)
